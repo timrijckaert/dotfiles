@@ -94,10 +94,9 @@ source $ZSH/oh-my-zsh.sh
 
 # EXPORTS
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-export LOCAL_SHARE="/usr/local/share"
 
 ## Android
-export ANDROID_HOME="$LOCAL_SHARE/android-sdk"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
 ANDROID_SDK_TOOLS="$ANDROID_HOME/tools"
 ANDROID_SDK_TOOLS_BIN="$ANDROID_SDK_TOOLS/bin"
 ANDROID_SDK_TOOLS_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
