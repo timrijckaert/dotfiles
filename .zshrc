@@ -105,15 +105,6 @@ ANDROID_SDK_TOOLS_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
 ## Java via Brew jenv
 export JENV="$HOME/.jenv/bin"
 eval "$(jenv init -)"
-# Adopt8
-# export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/"
-
-## Kotlin
-export KOTLIN_HOME="/Applications/Android\ Studio.app/Contents/plugins/Kotlin/kotlinc/bin"
-
-## Flutter
-FLUTTER_SDK="/usr/local/Caskroom/flutter/2.2.0/flutter/bin/"
-DART_SDK="$FLUTTER_SDK/cache/dart-sdk/bin"
 
 ## Onelogin integration
 # export AWS_PROFILE=onelogin
