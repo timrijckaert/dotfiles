@@ -1,0 +1,7 @@
+[user]
+	name = Tim Rijckaert
+	email = tim.rijckaert@gmail.com
+[pull]
+	ff = only
+[core]
+	autocrlf = input
