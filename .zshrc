@@ -70,7 +70,7 @@ ZSH_THEME="af-magic"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    zsh-autosuggestions
+    # zsh-autosuggestions 
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -100,10 +100,6 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 ANDROID_SDK_TOOLS="$ANDROID_HOME/tools"
 ANDROID_SDK_TOOLS_BIN="$ANDROID_SDK_TOOLS/bin"
 ANDROID_SDK_TOOLS_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
-
-## Java via Brew jenv
-export JENV="$HOME/.jenv/bin"
-eval "$(jenv init -)"
 
 ## Onelogin integration
 # export AWS_PROFILE=onelogin
@@ -145,7 +141,8 @@ alias gbc="git branch | grep -v '^*' | xargs git branch -D"
 
 ## Docker
 alias dockerprune='docker system prune --volumes'
-alias dockerrmiall="docker rmi -f $(docker images | awk '{if (NR>1) print $3}')"
+# Seems to evaluate at start of opening a shell
+# alias dockerrmiall="docker rmi -f $(docker images | awk '{if (NR>1) print $3}')"
 
 ## Android
 alias activefrags='adb shell dumpsys activity top | grep -E "Op"'
@@ -154,7 +151,13 @@ alias activefrags='adb shell dumpsys activity top | grep -E "Op"'
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# List available versions
+# sdk list java
+# 
+# Install java version by identifier
+# sdk install java <identifier>
+# eg: sdk install java 11.0.3.hs-adpt
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 export SDKMAN_OFFLINE_MODE=false
