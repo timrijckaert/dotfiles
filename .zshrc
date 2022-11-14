@@ -145,6 +145,8 @@ alias gp='git pull'
 alias gb='git branch -a'
 alias gapplyignore='git rm -r --cached . && git add .'
 alias gbc="git branch | grep -v '^*' | xargs git branch -D"
+# Squash all commits on branch. 'develop' is the branch to rebase from
+alias gsq="git reset $(git merge-base develop $(git rev-parse --abbrev-ref HEAD))" 
 
 ## Docker
 alias dockerprune='docker system prune --volumes'
